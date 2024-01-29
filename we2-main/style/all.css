@@ -1,142 +1,190 @@
 @charset "utf-8";
 
-body{
-    font-family: 'Courier New', Courier, "微軟正黑體", monospace;
+/* Reset ------------------------- */
+
+body {
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
 }
 
-img{
-    align-items: baseline;
+img {
+    vertical-align: bottom;
 }
 
-/* helper----------------- */
+/* Helper ------------------------------- */
 
-.container{
-    min-width: 1200px;
+.container {
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 
-.mx-auto{
+.mx-auto {
     margin-left: auto;
     margin-right: auto;
 }
 
-/* header----------------- */
-.header{
-    /* background-color: aqua; */
+/* Header ---------------------------- */
+
+.header {
+    /* background-color: pink; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-.header-head, .header-body, .header-foot{
+.header-head, .header-body, .header-foot {
     padding: .5rem 1rem;
     box-sizing: border-box;
 }
 
-.header-head{
+.header-head {
+    /* background-color: aqua; */
     width: 80px;
 }
 
-.header-foot, .header-btn-xmark{
+.header-body {
+    /* background-color: aqua; */
+}
+
+.header-btn-xmark, .header-foot {
     display: none;
 }
 
-.header-img{
-    min-width: 100%;
-    height: auto;
-}
-
-.header-ul{
+.header-ul {
     display: flex;
-    background-color: beige;
+    background-color: rgba(0, 0, 0, .7);
     padding: .5rem 1rem;
-    background-color: rgba(0 ,0, 0, .7);
     border-radius: 30px;
 }
 
-.header-li{
+.header-li {
     margin-left: 1rem;
     margin-right: 1rem;
 }
 
-.header-link{
+.header-link {
     text-decoration: none;
-    color: #fff;
     text-transform: uppercase;
-    font-size: .9rem;
-}
-
-/* banner */
-
-.banner{
-    display: flex;
-    background-image: linear-gradient(135deg,#cf7688 20%,#f5ba54 100%);
     color: #fff;
+    font-weight: 600;
+    font-size: .9rem;
+    transition-duration: .3s;
+}
+
+.header-link:hover {
+    color: #cf7688;
+}
+
+.header-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Banner ------------------------------------ */
+
+.banner {
+    background-image: linear-gradient(135deg, #cf7688, #f4ba54);
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.banner-container {
+    display: flex;
     align-items: center;
+    /* background-color: yellowgreen; */
 }
 
-.banner-container{
-    background-color: rgba(0, 89, 255, 0.849);
-}
-
-.banner-body{
-    background-color: rgba(255, 0, 234, 0.849);
-}
-
-.banner-head, .banner-body{
-    width: 50%;
+.banner-head, .banner-body {
     padding-left: 1rem;
     padding-right: 1rem;
-    box-sizing: border-box;
 }
 
-.banner-title{
-    margin-bottom: 2rem;
+.banner-index .banner-head {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+}
+
+.banner-index .banner-body {
+    width: 60%;
+    /* background-color: cadetblue; */
+    position: relative;
+}
+
+.banner-title {
     font-size: 2.2rem;
+    margin-bottom: 2rem;
 }
 
-.banner-small{
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.banner-small {
     display: block;
+    text-transform: uppercase;
+    font-size: 1.5rem;
     margin-top: .5rem;
 }
 
-.banner-subTitle{
-    margin-bottom: 2rem;
+.banner-subTitle {
     font-size: 1.75rem;
     line-height: 1.5;
+    opacity: .7;
+    margin-bottom: 2rem;
 }
 
-.banner-desc{
+.banner-ul {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    opacity: .3;
+    order: -1;
+    margin-bottom: 4rem;
+}
+
+.banner-li + .banner-li {
+    margin-left: 1rem;
+}
+
+.banner-desc {
     line-height: 1.6;
 }
 
-.banner-desc + .banner-desc{
-    margin-top: 1rem;
-}
-
-.banner-desc{
-    margin-top: 2rem;
-}
-.banner-btns{
+.banner-btns {
     margin-top: 2rem;
 }
 
-.banner-btn{
+.banner-btn {
     text-decoration: none;
     color: #fff;
-    text-transform: uppercase;}
-
-.banner-ul{
-    display: flex;
     text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 4rem;
-    font-weight: 600;
-    opacity: .3;
+    border: solid 2px #fff;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border-radius: 5px;
+    transition-duration: .3s;
 }
 
-.banner-li + .banner-li::before{
-    opacity: .3;
+.banner-btn:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.banner-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner-img-pad, .banner-img-mobile {
+    position: absolute;
+}
+
+.banner-img-mobile {
+    left: 0;
+    bottom: 5rem;
+}
+
+.banner-img-pad {
+    bottom: -2rem;
+    right: 1rem;
+}
+
+.banner-img-desktop {
+    margin-left: 4.5rem;
 }
