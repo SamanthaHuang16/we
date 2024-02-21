@@ -43,7 +43,9 @@ img {
     width: 100%;
 }
 
-.header-head, .header-body, .header-foot {
+.header-head,
+.header-body,
+.header-foot {
     padding: .5rem 1rem;
     box-sizing: border-box;
 }
@@ -57,7 +59,8 @@ img {
     /* background-color: aqua; */
 }
 
-.header-btn-xmark, .header-foot {
+.header-btn-xmark,
+.header-foot {
     display: none;
 }
 
@@ -105,7 +108,8 @@ img {
     /* background-color: yellowgreen; */
 }
 
-.banner-head, .banner-body {
+.banner-head,
+.banner-body {
     padding-left: 1rem;
     padding-right: 1rem;
 }
@@ -156,7 +160,7 @@ img {
     margin-bottom: 4rem;
 }
 
-.banner-li + .banner-li {
+.banner-li+.banner-li {
     margin-left: 1rem;
 }
 
@@ -164,7 +168,7 @@ img {
     line-height: 1.6;
 }
 
-.banner-desc + .banner-desc {
+.banner-desc+.banner-desc {
     margin-top: 1rem;
 }
 
@@ -197,13 +201,15 @@ img {
     height: auto;
 }
 
-.banner-img-pad, .banner-img-mobile {
+.banner-img-pad,
+.banner-img-mobile {
     position: absolute;
 }
 
 .banner-img-mobile {
     left: 0;
     bottom: 5rem;
+    z-index: 1;
 }
 
 .banner-img-pad {
@@ -215,7 +221,8 @@ img {
     margin-left: 4.5rem;
 }
 
-.banner-head, .banner-body {
+.banner-head,
+.banner-body {
     width: 50%;
 }
 
@@ -303,30 +310,39 @@ img {
     font-size: 3rem;
 }
 
-/* RWD--------------------- */
-@media screen and (max-width:480px) {
-    .header{
-        background-color: rgba(0, 0, 0, .7);
+/* RWD ---------------------------- */
+
+@media screen and (max-width: 480px) {
+
+    /* header -------------------- */
+    .header {
+        background-color: rgba(255, 255, 255, .7);
     }
-    .header-body{
+
+    .header-body {
         display: none;
     }
-    .header-foot{
+
+    .header-foot {
         display: block;
     }
-    .header-img-logo{
+
+    .header-img-logo {
         opacity: .5;
     }
-    .header-btn{
+
+    .header-btn {
         padding: 0;
         font-size: 2rem;
         background-color: transparent;
         border: none;
     }
-    .header-btn-bars{
+
+    .header-btn-bars {
         color: rgba(0, 0, 0, .5);
     }
-    .header-nav{
+
+    .header-nav {
         background-color: rgba(0, 0, 0, .8);
         position: fixed;
         top: 0;
@@ -338,57 +354,103 @@ img {
         align-items: center;
     }
 
-    .header-ul{
+    .header-ul {
         background-color: transparent;
         flex-direction: column;
     }
 
-    .header-link{
+    .header-link {
         display: block;
         font-size: 2rem;
         text-align: center;
         padding: .7rem 1rem;
     }
 
-    .header-btn-xmark{
+    .header-btn-xmark {
         display: block;
         position: absolute;
         top: .75rem;
         right: 1.3rem;
         color: #666;
     }
-    /* Banner------------- */
-    .banner-container{
+
+    /* banner --------------------------- */
+
+    .banner {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .banner-container {
         flex-direction: column;
     }
+
     .banner-index .banner-head,
-    .banner-index .banner-body{
+    .banner-index .banner-body,
+    .banner-head, .banner-body {
         width: 100%;
+        box-sizing: border-box;
     }
-    .banner-head{
+
+    .banner-head {
         text-align: center;
     }
 
-    .banner-title{
+    .banner-index .banner-body,
+    .banner-body {
+        padding-top: 1rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    .banner-title {
         font-size: 7vw;
     }
 
-    .banner-small{
+    .banner-title-line::after {
+        left: 50%;
+        margin-left: -1.5rem;
+    }
+
+
+    .banner-small {
         font-size: 5vw;
     }
 
-
-
-    .banner-img-desktop{
+    .banner-img-desktop {
         /* view width */
-        width: 70vW;
+        width: 70vw;
+        margin-left: 10vw;
     }
-    .banner-img-pad{
+
+    .banner-img-pad {
         width: 60vw;
     }
-    .banner-img-mobile{
+
+    .banner-img-mobile {
         width: 40vw;
+        bottom: 2.5rem;
+    }
+    /* aside ---------------- */
+
+    .aside {
+        display: none;
     }
 
-}
+    /* footer ----------------------- */
 
+    .footer {
+        clip-path: none;
+        padding-top: 1rem;
+    }
+
+    .footer-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-body {
+        display: none;}    
+}

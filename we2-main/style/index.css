@@ -219,68 +219,115 @@
     line-height: 1.5;
 }
 
-/* animation */
-
-
-.ani-move-downToUp{
+/* animation ------------------------------ */
+.ani-move-downToUp {
     transform: translateY(120%);
     animation-name: moveDownToUp;
     animation-duration: .5s;
     animation-fill-mode: forwards;
 }
 
-
-@keyframes moveDownToUp{
-    /* from{
+@keyframes moveDownToUp {
+    /* from {
         transform: translateY(120%);
     } */
-    to{
+    to {
         transform: translateY(0);
     }
 }
 
-
-.ani-fadeIn-leftToRight{
+.ani-move-leftToRight {
+    transform: translate(-100%);
     opacity: 0;
-    transform: translateX(-100%);
-    animation-name: fadeInLeftToRight;
+    animation-name: moveLeftToRight;
     animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes fadeInLeftToRight{
-    to{
+@keyframes moveLeftToRight {
+    to {
         transform: translate(0);
         opacity: 1;
     }
 }
 
-.ani-move-downToUp, .ani-fadeIn-leftToRight {
+.ani-fade-in {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-.banner-img-mobile{
-    left: 0;
-    z-index: 1;
-    bottom: 5rem;
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
-.ani-delay-1{
+.ani-zoom-in {
+    transform: scale(0);
+    transform-origin: left top;
+    animation-name: zoomIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+.ani-delay-1 {
     animation-delay: .3s;
 }
-.ani-delay-2{
+
+.ani-delay-2 {
     animation-delay: .6s;
 }
-.ani-delay-3{
+
+.ani-delay-3 {
     animation-delay: .9s;
 }
-.ani-delay-4{
+
+.ani-delay-4 {
     animation-delay: 1s;
 }
-.ani-delay-5{
+
+.ani-delay-5 {
     animation-delay: 1.2s;
 }
-.ani-delay-6{
-    animation-delay: 1.5s;
+
+.ani-delay-6 {
+    animation-delay: 1.3s;
 }
-.ani-delay-7{
-    animation-delay: 1.8s;
+
+.ani-delay-7 {
+    animation-delay: 1.4s;
+}
+
+/* RWD------------------ */
+@media screen and (max-width: 480px) {
+    .service-items{
+        flex-direction: column;
+    }    
+    .service-item{
+        width: auto;
+    }
+    /* project-------------- */
+    .base-intro{
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+    }
+
+    .base-intro .base-head{
+        text-align: center;
+    }
+
+    .base-intro .base-btns{
+        text-align: center;
+    }
+    /* Build---------------- */
+    .base-build .base-body{
+        max-width: 80vW;
+    }
 }
