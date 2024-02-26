@@ -73,13 +73,16 @@ body {
     grid-template-columns: repeat(5, 1fr);
 }
 
-/* RWD---------------- */
+/* RWD ---------------------------- */
+
 @media screen and (max-width: 480px) {
-    .grid-3, .grid-4{
+
+    .grid-3,
+    .grid-4 {
         grid-template-columns: repeat(1, 1fr);
     }
-    .main-title{
+
+    .main-title {
         text-align: center;
     }
-    
 }

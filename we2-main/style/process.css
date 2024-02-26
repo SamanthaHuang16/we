@@ -80,25 +80,33 @@
     color: rgba(0, 0, 0, .7);
 }
 
+/* RWD ----------------- */
+
 @media screen and (max-width: 480px) {
+
     .process-item,
-    .process-ol{
+    .process-ol {
         flex-direction: column;
     }
+
     .process-head,
     .process-body,
-    .process-li{
+    .process-li {
         width: auto;
     }
 
-    .process-head{
+    .process-head {
         padding: 1rem;
     }
-    .process-li{
+
+    .process-li {
         padding: 0;
         margin: 1rem;
     }
-    .process-name{
+
+    .process-name {
         text-align: center;
     }
+
+
 }

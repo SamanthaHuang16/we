@@ -3,7 +3,7 @@
 
 /* base---------------------------------------- */
 
-.base{
+.base {
     /* background-color: pink; */
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -15,7 +15,8 @@
     padding-right: 1rem;
 }
 
-.base-head, .base-foot {
+.base-head,
+.base-foot {
     text-align: center;
 }
 
@@ -107,7 +108,7 @@
 .project-img {
     max-width: 100%;
     height: auto;
-}   
+}
 
 /* intro -------------------------------------- */
 
@@ -189,7 +190,7 @@
     transform: skewX(-15deg);
 }
 
-.build-li + .build-li {
+.build-li+.build-li {
     margin-top: 2rem;
 }
 
@@ -228,6 +229,7 @@
 }
 
 @keyframes moveDownToUp {
+
     /* from {
         transform: translateY(120%);
     } */
@@ -306,28 +308,43 @@
     animation-delay: 1.4s;
 }
 
-/* RWD------------------ */
+/* RWD ---------------------------- */
+
 @media screen and (max-width: 480px) {
-    .service-items{
+
+    /* service -------------------- */
+    
+    .service-items {
         flex-direction: column;
-    }    
-    .service-item{
+    }
+
+    .service-item {
         width: auto;
     }
-    /* project-------------- */
-    .base-intro{
+
+    /* project -------------------- */
+
+    .project-item {
+        width: 33.33333%;
+    }
+
+    /* intro ------------------------- */
+
+    .base-intro {
         clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
     }
 
-    .base-intro .base-head{
+    .base-intro .base-head {
         text-align: center;
     }
 
-    .base-intro .base-btns{
+    .base-intro .base-btns {
         text-align: center;
     }
-    /* Build---------------- */
-    .base-build .base-body{
-        max-width: 80vW;
+
+    /* build ------------------ */
+
+    .base-build .base-body {
+        max-width: 80vw;
     }
 }
